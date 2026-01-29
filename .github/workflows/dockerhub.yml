@@ -28,5 +28,5 @@ jobs:
           file: angular/Dockerfile
           push: true
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/angular-my:latest
-            ${{ secrets.DOCKERHUB_USERNAME }}/angular-my:${{ github.sha }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/simple-angular:latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/simple-angular:${{ github.sha }}

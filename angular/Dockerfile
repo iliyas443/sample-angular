@@ -32,7 +32,7 @@ FROM nginxinc/nginx-unprivileged:${NGINX_VERSION} AS runner
 COPY --link nginx.conf /etc/nginx/nginx.conf
 
 # Application name
-ARG APP_NAME=my-angular-app
+ARG APP_NAME=simple-angular
 
 # Copy the static build output from the build stage to Nginx's default HTML serving directory
 COPY --link --from=builder /app/dist/${APP_NAME}/browser /usr/share/nginx/html
