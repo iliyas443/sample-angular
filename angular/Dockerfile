@@ -35,7 +35,7 @@ COPY --link nginx.conf /etc/nginx/nginx.conf
 ARG APP_NAME=simple-angular
 
 # Copy the static build output from the build stage to Nginx's default HTML serving directory
-COPY --link --from=builder /app/dist/${APP_NAME}/browser /usr/share/nginx/html
+COPY --link --from=builder /app/dist /usr/share/nginx/html
 
 # Use a built-in non-root user for security best practices
 USER nginx
